@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter';
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+.hidden {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 90%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: sticky;
+    background: hsl(0, 0%, 100%);
+    top: 0;
+    border-bottom: 3px solid hsl(236, 13%, 42%);
+}
+
+.open,
+.close {
+    position: fixed;
+    right: 6%;
+    padding-top: 0.5rem;
+}
+
+.close {
+    transform: translateX(-10%) translateY(-15%);
+}
+
+.hamburger-menu {
+    position: absolute;
+    background: hsl(0, 0%, 100%);
+    width: 70%;
+    display: flex;
+    top: -20%;
+    right: 0%;
+    transform: translateX(10%);
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 0 20px -5px hsl(35, 77%, 62%);
+}
+
+.item {
+    min-width: 30%;
+    padding-left: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px hsl(236, 13%, 42%) solid;
+}
+
+.nav-bar {
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 90%;
+    display: none;
+}
+
+.nav-item {
+    width: 2rem;
+}
+
+.nav-item:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+.menu-content {
+    position: relative;
+}
+
+
+.container {
+    width: 90%;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "p p p p  p p p p  p p p p"
+        "h h h h  h h h h  h h h h"
+        "t t t t  t t t t  t t t t"
+        "n n n n  n n n n  n n n n"
+        "n n n n  n n n n  n n n n"
+        "a1 a1 a1 a1 a1 a1 a1 a1 a1 a1 a1 a1"
+        "a2 a2 a2 a2 a2 a2 a2 a2 a2 a2 a2 a2"
+        "a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3 a3";
+    gap: 1rem;
+}
+
+.news-section {
+    grid-area: n;
+    padding: 2rem;
+    background: hsl(240, 100%, 5%);
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.news-section h2 {
+    color: hsl(35, 77%, 62%);
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+}
+
+.separator {
+    border-top: 1px solid hsl(236, 13%, 42%);
+    margin-top: 2rem;
+}
+
+.news-post p {
+    color: hsl(233, 8%, 79%);
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0;
+}
+
+.news-post h3 {
+    font-size: 2rem;
+    padding: 0;
+}
+
+.news-post h3:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+picture>img {
+    width: 100%;
+}
+
+.banner {
+    grid-area: p;
+}
+
+.banner-title {
+    grid-area: h;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    margin-top: -3rem;
+    margin-bottom: -1rem;
+}
+
+.banner-text {
+    grid-area: t;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner-text p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 0;
+    color: hsl(236, 13%, 42%);
+}
+
+.banner-text button {
+    all: unset;
+    background: hsl(5, 85%, 63%);
+    text-align: center;
+    width: 50%;
+    height: 60px;
+    color: hsl(36, 100%, 99%);
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.banner-text button:hover {
+    background-color: hsl(240, 100%, 5%);
+    cursor: pointer;
+}
+
+.article {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.article picture {
+    min-width: 30%;
+    max-width: 30%;
+}
+
+.article1 {
+    grid-area: a1;
+
+}
+
+.article2 {
+    grid-area: a2;
+}
+
+.article3 {
+    grid-area: a3;
+}
+
+.article-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.article h3 {
+    font-size: 1.5rem;
+    margin: 0 1rem 0.4rem 1rem;
+    color: hsl(233, 8%, 79%);
+    padding: 0;
+}
+
+.article h4 {
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0 1rem 0.4rem 1rem;
+}
+
+.article h4:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+.article p {
+    color: hsl(236, 13%, 42%);
+    font-size: 1rem;
+    margin: 0 1rem 0.4rem 1rem;
+}
+
+.footer {
+    grid-area: f;
+}
+
+@media (min-width: 980px) {
+    .main-content {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+            "p p p p  p p p p  n n n n"
+            "p p p p  p p p p  n n n n"
+            "h h h h  t t t t  n n n n"
+            "h h h h  t t t t  n n n n"
+            "a1 a1 a1 a1 a2 a2 a2 a2 a3 a3 a3 a3"
+            "a1 a1 a1 a1 a2 a2 a2 a2 a3 a3 a3 a3";
+        gap: 2rem;
+    }
+
+    .banner-title {
+        font-size: 2.6rem;
+    }
+
+    .nav-bar {
+        position: relative;
+        display: flex;
+    }
+
+    .nav-item {
+        display: block;
+        visibility: visible;
+        margin-left: 5rem;
+        font-size: 1.3rem;
+        width: 90%;
+        text-align: center;
+    }
+
+    .article-content h3 {
+        font-size: 3rem;
+    }
+
+    .menu {
+        border: none;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+}
